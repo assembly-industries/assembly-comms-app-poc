@@ -577,6 +577,146 @@ export function ICPPage() {
         )}
       </div>
 
+      {/* ── Early Adopters & Individual Decision Makers section ── */}
+      <div className="bg-white border-t border-gray-100 px-6 py-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="mb-8">
+            <div className="tag bg-amber-50 text-amber-700 border border-amber-200 mb-3">Buyer psychographics</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Early adopters & individual decision makers</h2>
+            <p className="text-gray-500 text-base max-w-2xl leading-relaxed">
+              Beyond job title and industry, the people who adopt Comms first share a specific mindset and buying authority. These two profiles predict adoption more reliably than any firmographic filter.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-5">
+
+            {/* Early Adopter */}
+            <div className="bg-gradient-to-br from-[#0D1117] to-[#1a2744] rounded-2xl overflow-hidden">
+              <div className="px-6 py-5 border-b border-white/10">
+                <div className="text-[10px] font-bold text-brand-pale/50 uppercase tracking-wider mb-1.5">Profile 1</div>
+                <h3 className="text-xl font-bold text-white">The Early Adopter</h3>
+                <p className="text-sm text-white/50 mt-1">Already solving this with a worse tool — ready to upgrade</p>
+              </div>
+              <div className="px-6 py-5 space-y-5">
+
+                {/* Signals */}
+                <div>
+                  <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-3">How to spot them</div>
+                  <div className="space-y-2.5">
+                    {[
+                      { icon: '📋', text: 'Uses Google Forms or Typeform for structured collection — frustrated by low completion rates and no follow-up' },
+                      { icon: '📧', text: 'Manages vendor or candidate outreach manually in Gmail — has a "follow up" folder or a spreadsheet with status columns' },
+                      { icon: '🔁', text: 'Sends the same kind of message every week or month — onboarding new people, collecting recurring documents, running check-ins' },
+                      { icon: '😤', text: 'Has complained about this specific problem in the last 30 days — it\'s not theoretical pain, it\'s active frustration' },
+                      { icon: '🚀', text: 'Already uses tools like Calendly, Loom, or Notion — comfort with async, structured workflows, and outcome-oriented tools' },
+                    ].map(s => (
+                      <div key={s.icon} className="flex items-start gap-3">
+                        <span className="text-base shrink-0 mt-0.5">{s.icon}</span>
+                        <span className="text-sm text-white/70 leading-relaxed">{s.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Aha moment */}
+                <div className="bg-white/5 rounded-xl px-4 py-4 border border-white/10">
+                  <div className="text-xs font-bold text-brand-pale/60 uppercase tracking-wider mb-2">Their aha moment</div>
+                  <p className="text-sm text-white/80 leading-relaxed italic">
+                    "Wait — it writes the conversation draft for me, sends it, follows up automatically, and gives me a summary when everyone's done? That's the thing I've been trying to build in Zapier for two years."
+                  </p>
+                </div>
+
+                {/* What converts them */}
+                <div>
+                  <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-2">What converts them</div>
+                  <div className="space-y-1.5">
+                    {[
+                      'A shared session link from someone they trust (zero-friction first impression)',
+                      'Seeing their exact workflow in a pre-built template at sign-up',
+                      'Completing their first dispatch in under 5 minutes',
+                    ].map(c => (
+                      <div key={c} className="flex items-start gap-2 text-sm text-white/60">
+                        <Check size={13} className="text-green-400 mt-0.5 shrink-0" />
+                        {c}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Individual Decision Maker */}
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl overflow-hidden">
+              <div className="px-6 py-5 border-b border-amber-200">
+                <div className="text-[10px] font-bold text-amber-600/70 uppercase tracking-wider mb-1.5">Profile 2</div>
+                <h3 className="text-xl font-bold text-gray-900">The Individual Decision Maker</h3>
+                <p className="text-sm text-gray-500 mt-1">Can sign up, pay, and go live without committee approval</p>
+              </div>
+              <div className="px-6 py-5 space-y-5">
+
+                {/* Who they are */}
+                <div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Who they are</div>
+                  <div className="space-y-2.5">
+                    {[
+                      { role: 'Head of Ops at 30–200 person company', note: 'Owns the vendor and contractor workflow end-to-end. Decides tools, runs processes, feels the pain directly.' },
+                      { role: 'Solo or small-team recruiter', note: 'Runs the full hiring loop. No procurement process for SaaS tools under $500/mo. Will trial anything that saves time.' },
+                      { role: 'Founder (pre-Series B)', note: 'Uses a personal card or company card. Decides in an afternoon. Will pilot with their first real workflow immediately.' },
+                      { role: 'PM or team lead who owns a workflow', note: 'Has budget authority or can get manager approval in one Slack message. Controls the process they\'ll use it for.' },
+                      { role: 'Compliance officer at mid-market', note: 'Has discretionary budget for audit-related tooling. Justified with one audit prep cycle.' },
+                    ].map(p => (
+                      <div key={p.role} className="bg-white rounded-xl px-4 py-3 border border-amber-100">
+                        <div className="text-sm font-bold text-gray-900 mb-0.5">{p.role}</div>
+                        <div className="text-xs text-gray-500 leading-relaxed">{p.note}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Why they matter */}
+                <div className="bg-amber-100 rounded-xl px-4 py-4 border border-amber-200">
+                  <div className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">Why this profile drives growth</div>
+                  <p className="text-sm text-amber-900 leading-relaxed">
+                    Individual decision makers don't need a demo, a procurement process, or a multi-stakeholder sign-off. They sign up, run a session with real data, get a result — and then forward the outcome to their manager. That forwarded report is the expansion moment: the manager becomes a new dispatcher, or approves a team-wide rollout.
+                  </p>
+                </div>
+
+                {/* Anti-pattern */}
+                <div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Who is NOT this profile</div>
+                  <div className="space-y-1.5">
+                    {[
+                      'IT or security teams evaluating tools for others (long cycle, procurement gate)',
+                      'Middle managers who need 3 layers of approval to expense $50/mo',
+                      'People who need to "get buy-in" before they can even try it',
+                    ].map(a => (
+                      <div key={a} className="flex items-start gap-2 text-sm text-gray-500">
+                        <X size={12} weight="bold" className="text-red-400 mt-0.5 shrink-0" />
+                        {a}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Overlap callout */}
+          <div className="mt-5 bg-brand-ghost border border-brand-indigo/20 rounded-2xl px-6 py-5 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-brand-indigo flex items-center justify-center shrink-0">
+              <Sparkle size={16} weight="fill" className="text-white" />
+            </div>
+            <div>
+              <div className="font-bold text-gray-900 mb-1">The sweet spot: both at once</div>
+              <p className="text-sm text-gray-600 leading-relaxed max-w-3xl">
+                The highest-converting prospect is someone who is <strong>both</strong> an early adopter <em>and</em> an individual decision maker — they feel the pain personally, have the authority to act, and don't need permission. A Head of Operations at a 60-person company who's been chasing vendors over email for two years fits both profiles perfectly. Target this overlap first.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ICP summary strip */}
       <div className="bg-white border-t border-gray-100 px-6 py-4">
         <div className="max-w-[1100px] mx-auto flex flex-wrap gap-2 items-center">
@@ -595,7 +735,7 @@ export function ICPPage() {
 
       <PrototypeBanner
         title="Prototype: ICP Explorer"
-        description="6 ideal customer segments with fit scores, pain point mapping, buying triggers, and an interactive calculator."
+        description="8 ICP segments, fit calculator, anti-ICP patterns, and early adopter / decision maker psychographic profiles."
       />
     </div>
   )
