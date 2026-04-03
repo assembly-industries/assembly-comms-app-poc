@@ -18,6 +18,7 @@ const coreLinks = [
 
 const moreLinks = [
   { label: 'ICP Explorer', href: '/app/icp' },
+  { label: 'Push vs Pull', href: '/app/push-pull' },
   { label: 'Session Viewer', href: '/app/session-viewer' },
   { label: 'User Experience', href: '/app/user-experience' },
   { label: 'Daily Usage & PLG', href: '/app/daily-usage' },
