@@ -14,7 +14,7 @@ export function CTA() {
           <div className="relative z-10 text-center py-20 px-8 space-y-8">
             <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold border border-white/20">
               <Sparkles size={14} />
-              Powered by Assembly AI
+              Built for AI-first teams
             </div>
 
             <h2 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ export function CTA() {
 
             {/* Trust line */}
             <p className="text-white/40 text-sm">
-              No credit card required · Enterprise plans available · Built on Assembly AI
+              No credit card required · Enterprise plans available
             </p>
           </div>
         </div>

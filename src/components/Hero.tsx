@@ -18,7 +18,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-brand-ghost text-brand-blue px-4 py-2 rounded-full text-sm font-semibold">
               <Sparkles size={14} />
-              Powered by Assembly AI
+              Built for AI-first teams
             </div>
 
             <div className="space-y-4">

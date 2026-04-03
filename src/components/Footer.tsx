@@ -1,5 +1,3 @@
-import { Sparkles } from 'lucide-react'
-
 export function Footer() {
   return (
     <footer className="bg-[#0D1117] text-white">
@@ -15,9 +13,6 @@ export function Footer() {
               <span className="font-bold text-base">Comms</span>
             </div>
             <p className="text-xs text-white/40">The best way to work with humans.</p>
-            <div className="flex items-center gap-1.5 text-xs text-white/25">
-              <Sparkles size={10} /> Powered by Assembly AI
-            </div>
           </div>
           {[
             { label: 'Product', links: ['Dispatcher', 'Sync', 'Async', 'Channels', 'Sessions'] },

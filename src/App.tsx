@@ -11,6 +11,7 @@ import { UseCasesPage } from './pages/UseCasesPage'
 import { EndUserExperiencePage } from './pages/EndUserExperiencePage'
 import { DailyUsagePage } from './pages/DailyUsagePage'
 import { SessionViewerPage } from './pages/SessionViewerPage'
+import { ICPPage } from './pages/ICPPage'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <Route path="/app/sessions" element={<SessionsPage />} />
       <Route path="/app/contacts" element={<ContactsPage />} />
       <Route path="/app/session-viewer" element={<SessionViewerPage />} />
+      <Route path="/app/icp" element={<ICPPage />} />
       <Route path="/logo-options" element={<LogoOptionsPage />} />
       <Route path="/developer" element={<DeveloperPage />} />
     </Routes>

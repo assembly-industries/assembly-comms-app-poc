@@ -21,7 +21,7 @@ export function CTASection() {
                 Explore All Modes
               </a>
             </div>
-            <p className="text-white/30 text-xs">Assembly Industries · Powered by Assembly AI</p>
+            <p className="text-white/30 text-xs">No card required · Enterprise plans available</p>
           </div>
         </div>
       </div>
