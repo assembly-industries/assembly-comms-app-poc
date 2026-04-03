@@ -577,123 +577,164 @@ export function ICPPage() {
         )}
       </div>
 
-      {/* ── Early Adopters & Individual Decision Makers section ── */}
+      {/* ── Two buyer types ── */}
       <div className="bg-white border-t border-gray-100 px-6 py-10">
         <div className="max-w-[1100px] mx-auto">
+
           <div className="mb-8">
-            <div className="tag bg-amber-50 text-amber-700 border border-amber-200 mb-3">Buyer psychographics</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Early adopters & individual decision makers</h2>
+            <div className="tag bg-brand-ghost text-brand-indigo mb-3">Buyer types</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Two fundamentally different buyers</h2>
             <p className="text-gray-500 text-base max-w-2xl leading-relaxed">
-              Beyond job title and industry, the people who adopt Comms first share a specific mindset and buying authority. These two profiles predict adoption more reliably than any firmographic filter.
+              Comms serves two buyer types with different sales motions, conversion paths, and expansion patterns. Knowing which one you're talking to changes everything — the message, the proof point, and the close.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-5">
+          {/* Side-by-side buyer cards */}
+          <div className="grid lg:grid-cols-2 gap-5 mb-5">
 
-            {/* Early Adopter */}
-            <div className="bg-gradient-to-br from-[#0D1117] to-[#1a2744] rounded-2xl overflow-hidden">
-              <div className="px-6 py-5 border-b border-white/10">
-                <div className="text-[10px] font-bold text-brand-pale/50 uppercase tracking-wider mb-1.5">Profile 1</div>
-                <h3 className="text-xl font-bold text-white">The Early Adopter</h3>
-                <p className="text-sm text-white/50 mt-1">Already solving this with a worse tool — ready to upgrade</p>
+            {/* Buyer 1: B2B Enterprise */}
+            <div className="rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="bg-brand-shaft px-6 py-5">
+                <div className="text-[10px] font-bold text-brand-pale/50 uppercase tracking-wider mb-1.5">Buyer type 1</div>
+                <h3 className="text-xl font-bold text-white">B2B Enterprise Buyer</h3>
+                <p className="text-sm text-white/50 mt-1">The company is the customer — structured evaluation, team rollout</p>
               </div>
-              <div className="px-6 py-5 space-y-5">
+              <div className="px-6 py-5 bg-white space-y-5">
 
-                {/* Signals */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { label: 'Company size', value: '200–10,000 employees' },
+                    { label: 'Deal cycle', value: '4–12 weeks' },
+                    { label: 'Stakeholders', value: 'Champion + Exec + IT' },
+                    { label: 'Billing', value: 'Annual contract' },
+                  ].map(s => (
+                    <div key={s.label} className="bg-gray-50 rounded-xl px-3 py-2.5">
+                      <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{s.label}</div>
+                      <div className="text-sm font-bold text-gray-900 mt-0.5">{s.value}</div>
+                    </div>
+                  ))}
+                </div>
+
                 <div>
-                  <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-3">How to spot them</div>
-                  <div className="space-y-2.5">
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">How they buy</div>
+                  <div className="space-y-2">
                     {[
-                      { icon: '📋', text: 'Uses Google Forms or Typeform for structured collection — frustrated by low completion rates and no follow-up' },
-                      { icon: '📧', text: 'Manages vendor or candidate outreach manually in Gmail — has a "follow up" folder or a spreadsheet with status columns' },
-                      { icon: '🔁', text: 'Sends the same kind of message every week or month — onboarding new people, collecting recurring documents, running check-ins' },
-                      { icon: '😤', text: 'Has complained about this specific problem in the last 30 days — it\'s not theoretical pain, it\'s active frustration' },
-                      { icon: '🚀', text: 'Already uses tools like Calendly, Loom, or Notion — comfort with async, structured workflows, and outcome-oriented tools' },
-                    ].map(s => (
-                      <div key={s.icon} className="flex items-start gap-3">
-                        <span className="text-base shrink-0 mt-0.5">{s.icon}</span>
-                        <span className="text-sm text-white/70 leading-relaxed">{s.text}</span>
+                      'An internal champion (ops lead, HR manager, compliance officer) discovers Comms and runs an internal pilot',
+                      'Pilot results become the business case — session outcomes, time saved, completion rates',
+                      'IT security review and procurement sign-off before company-wide rollout',
+                      'Expansion follows: one team → multiple departments → enterprise contract',
+                    ].map((s, i) => (
+                      <div key={i} className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-brand-indigo/10 text-brand-indigo flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">{i + 1}</div>
+                        <span className="text-sm text-gray-600 leading-relaxed">{s}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Aha moment */}
-                <div className="bg-white/5 rounded-xl px-4 py-4 border border-white/10">
-                  <div className="text-xs font-bold text-brand-pale/60 uppercase tracking-wider mb-2">Their aha moment</div>
-                  <p className="text-sm text-white/80 leading-relaxed italic">
-                    "Wait — it writes the conversation draft for me, sends it, follows up automatically, and gives me a summary when everyone's done? That's the thing I've been trying to build in Zapier for two years."
-                  </p>
-                </div>
-
-                {/* What converts them */}
                 <div>
-                  <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-2">What converts them</div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">What they need to convert</div>
                   <div className="space-y-1.5">
                     {[
-                      'A shared session link from someone they trust (zero-friction first impression)',
-                      'Seeing their exact workflow in a pre-built template at sign-up',
-                      'Completing their first dispatch in under 5 minutes',
-                    ].map(c => (
-                      <div key={c} className="flex items-start gap-2 text-sm text-white/60">
-                        <Check size={13} className="text-green-400 mt-0.5 shrink-0" />
-                        {c}
+                      'ROI proof from the pilot — time saved, completion rate vs. their old method',
+                      'Security documentation (SOC 2, data handling, email deliverability)',
+                      'SSO, audit logs, team permissions — enterprise table stakes',
+                      'A champion who will fight for the budget internally',
+                    ].map(s => (
+                      <div key={s} className="flex items-start gap-2 text-sm text-gray-500">
+                        <Check size={12} weight="bold" className="text-brand-indigo mt-0.5 shrink-0" />
+                        {s}
                       </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-3">
+                  <div className="text-xs font-bold text-blue-700 mb-1">Their aha moment</div>
+                  <p className="text-sm text-blue-900 italic leading-relaxed">"The pilot ran 40 vendor verifications with zero manual follow-up. That's 6 hours a week back for my team. This is going to the CFO."</p>
+                </div>
+
+                <div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Expansion pattern</div>
+                  <div className="flex items-center gap-2 flex-wrap text-xs font-semibold">
+                    {['Ops pilot', '→', 'HR team', '→', 'Compliance', '→', 'Enterprise contract'].map((s, i) => (
+                      <span key={i} className={s === '→' ? 'text-gray-300' : 'bg-brand-ghost text-brand-indigo px-2.5 py-1 rounded-full'}>{s}</span>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Individual Decision Maker */}
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl overflow-hidden">
-              <div className="px-6 py-5 border-b border-amber-200">
-                <div className="text-[10px] font-bold text-amber-600/70 uppercase tracking-wider mb-1.5">Profile 2</div>
-                <h3 className="text-xl font-bold text-gray-900">The Individual Decision Maker</h3>
-                <p className="text-sm text-gray-500 mt-1">Can sign up, pay, and go live without committee approval</p>
+            {/* Buyer 2: Individual Professional */}
+            <div className="rounded-2xl border border-amber-200 overflow-hidden">
+              <div className="bg-gradient-to-br from-amber-500 to-orange-500 px-6 py-5">
+                <div className="text-[10px] font-bold text-white/60 uppercase tracking-wider mb-1.5">Buyer type 2</div>
+                <h3 className="text-xl font-bold text-white">Individual Professional</h3>
+                <p className="text-sm text-white/60 mt-1">Has full agency over their comms — signs up, pays, ships the same day</p>
               </div>
-              <div className="px-6 py-5 space-y-5">
+              <div className="px-6 py-5 bg-white space-y-5">
 
-                {/* Who they are */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { label: 'Company size', value: '1–200 employees' },
+                    { label: 'Deal cycle', value: 'Same day' },
+                    { label: 'Stakeholders', value: 'Just them' },
+                    { label: 'Billing', value: 'Credit card, monthly' },
+                  ].map(s => (
+                    <div key={s.label} className="bg-gray-50 rounded-xl px-3 py-2.5">
+                      <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{s.label}</div>
+                      <div className="text-sm font-bold text-gray-900 mt-0.5">{s.value}</div>
+                    </div>
+                  ))}
+                </div>
+
                 <div>
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Who they are</div>
-                  <div className="space-y-2.5">
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">Who they are</div>
+                  <div className="space-y-2">
                     {[
-                      { role: 'Head of Ops at 30–200 person company', note: 'Owns the vendor and contractor workflow end-to-end. Decides tools, runs processes, feels the pain directly.' },
-                      { role: 'Solo or small-team recruiter', note: 'Runs the full hiring loop. No procurement process for SaaS tools under $500/mo. Will trial anything that saves time.' },
-                      { role: 'Founder (pre-Series B)', note: 'Uses a personal card or company card. Decides in an afternoon. Will pilot with their first real workflow immediately.' },
-                      { role: 'PM or team lead who owns a workflow', note: 'Has budget authority or can get manager approval in one Slack message. Controls the process they\'ll use it for.' },
-                      { role: 'Compliance officer at mid-market', note: 'Has discretionary budget for audit-related tooling. Justified with one audit prep cycle.' },
+                      { role: 'Head of Ops / Founder at a small company', note: 'Owns the workflow end-to-end. No procurement gate.' },
+                      { role: 'Solo or boutique recruiter', note: 'Runs the full hiring loop. Will try anything that saves 2 hours a week.' },
+                      { role: 'Independent consultant or agency owner', note: 'Buys tools on a card. Pilots before recommending to clients.' },
+                      { role: 'PM or team lead with a clear pain', note: 'Gets manager Slack approval in 10 minutes. Just needs the result.' },
                     ].map(p => (
-                      <div key={p.role} className="bg-white rounded-xl px-4 py-3 border border-amber-100">
-                        <div className="text-sm font-bold text-gray-900 mb-0.5">{p.role}</div>
-                        <div className="text-xs text-gray-500 leading-relaxed">{p.note}</div>
+                      <div key={p.role} className="flex items-start gap-2.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" />
+                        <div>
+                          <span className="text-sm font-semibold text-gray-900">{p.role} </span>
+                          <span className="text-sm text-gray-500">— {p.note}</span>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Why they matter */}
-                <div className="bg-amber-100 rounded-xl px-4 py-4 border border-amber-200">
-                  <div className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">Why this profile drives growth</div>
-                  <p className="text-sm text-amber-900 leading-relaxed">
-                    Individual decision makers don't need a demo, a procurement process, or a multi-stakeholder sign-off. They sign up, run a session with real data, get a result — and then forward the outcome to their manager. That forwarded report is the expansion moment: the manager becomes a new dispatcher, or approves a team-wide rollout.
-                  </p>
+                <div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2.5">How they buy</div>
+                  <div className="space-y-2">
+                    {[
+                      'Finds Comms via shared session link, search, or peer referral',
+                      'Signs up, picks a template matching their workflow, dispatches in under 10 minutes',
+                      'Gets a result — outcome summary, completions, follow-up log',
+                      'Shares the outcome with their manager or team → expansion begins',
+                    ].map((s, i) => (
+                      <div key={i} className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">{i + 1}</div>
+                        <span className="text-sm text-gray-600 leading-relaxed">{s}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Anti-pattern */}
+                <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
+                  <div className="text-xs font-bold text-amber-700 mb-1">Their aha moment</div>
+                  <p className="text-sm text-amber-900 italic leading-relaxed">"I described what I needed, it drafted the conversation, I hit send. Twenty minutes later the first vendor responded. I've been doing this manually for three years."</p>
+                </div>
+
                 <div>
-                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Who is NOT this profile</div>
-                  <div className="space-y-1.5">
-                    {[
-                      'IT or security teams evaluating tools for others (long cycle, procurement gate)',
-                      'Middle managers who need 3 layers of approval to expense $50/mo',
-                      'People who need to "get buy-in" before they can even try it',
-                    ].map(a => (
-                      <div key={a} className="flex items-start gap-2 text-sm text-gray-500">
-                        <X size={12} weight="bold" className="text-red-400 mt-0.5 shrink-0" />
-                        {a}
-                      </div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Expansion pattern</div>
+                  <div className="flex items-center gap-2 flex-wrap text-xs font-semibold">
+                    {['Self sign-up', '→', 'First result', '→', 'Shares outcome', '→', 'Team adopts'].map((s, i) => (
+                      <span key={i} className={s === '→' ? 'text-gray-300' : 'bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-1 rounded-full'}>{s}</span>
                     ))}
                   </div>
                 </div>
@@ -702,18 +743,55 @@ export function ICPPage() {
 
           </div>
 
-          {/* Overlap callout */}
-          <div className="mt-5 bg-brand-ghost border border-brand-indigo/20 rounded-2xl px-6 py-5 flex items-start gap-4">
+          {/* Comparison table */}
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-5">
+            <div className="px-5 py-3 bg-gray-50 border-b border-gray-200">
+              <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Side-by-side comparison</span>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    <th className="text-left px-5 py-3 text-xs font-bold text-gray-400 uppercase tracking-wider w-1/3">Dimension</th>
+                    <th className="text-left px-5 py-3 text-xs font-bold text-brand-indigo uppercase tracking-wider">B2B Enterprise</th>
+                    <th className="text-left px-5 py-3 text-xs font-bold text-amber-600 uppercase tracking-wider">Individual Professional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ['Entry point', 'Internal champion runs a pilot', 'Self-serve via link, search, or referral'],
+                    ['Time to first session', '2–4 weeks (pilot setup)', 'Same day'],
+                    ['Decision maker', 'Champion + exec + IT', 'Themselves'],
+                    ['Primary proof point', 'ROI metrics and security docs', 'First session result'],
+                    ['Expansion trigger', 'Pilot → business case → contract', 'Shared outcome report'],
+                    ['Churn risk', 'Low — embedded in workflow', 'Medium — depends on habit formation'],
+                    ['ACV potential', 'High — team/org license', 'Lower — personal plan'],
+                    ['Virality', 'Slower — internal approvals', 'High — shares outcomes widely'],
+                  ].map(([dim, ent, ind], i) => (
+                    <tr key={dim} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                      <td className="px-5 py-3 font-semibold text-gray-700">{dim}</td>
+                      <td className="px-5 py-3 text-gray-600">{ent}</td>
+                      <td className="px-5 py-3 text-gray-600">{ind}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Strategic callout */}
+          <div className="bg-brand-shaft rounded-2xl px-6 py-5 flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-brand-indigo flex items-center justify-center shrink-0">
               <Sparkle size={16} weight="fill" className="text-white" />
             </div>
             <div>
-              <div className="font-bold text-gray-900 mb-1">The sweet spot: both at once</div>
-              <p className="text-sm text-gray-600 leading-relaxed max-w-3xl">
-                The highest-converting prospect is someone who is <strong>both</strong> an early adopter <em>and</em> an individual decision maker — they feel the pain personally, have the authority to act, and don't need permission. A Head of Operations at a 60-person company who's been chasing vendors over email for two years fits both profiles perfectly. Target this overlap first.
+              <div className="font-bold text-white mb-1.5">The motion that unlocks both</div>
+              <p className="text-sm text-white/70 leading-relaxed max-w-3xl">
+                Individual professionals are the acquisition engine — they sign up fast, get value fast, and share outcomes widely. Those shared outcomes become the proof point that converts enterprise buyers. The best go-to-market strategy is to <strong className="text-white">optimize hard for individual self-serve first</strong> — the enterprise deals follow naturally when a champion inside a company has already proven ROI on their own account.
               </p>
             </div>
           </div>
+
         </div>
       </div>
 
