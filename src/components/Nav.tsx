@@ -13,6 +13,7 @@ const coreLinks = [
   { label: 'Live Call', href: '/app/sync' },
   { label: 'Async Chat', href: '/app/async' },
   { label: 'Sessions', href: '/app/sessions' },
+  { label: 'Requests', href: '/app/requests' },
   { label: 'Contacts', href: '/app/contacts' },
 ]
 
