@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # Netlify
 .netlify/
+assembly-assistant
+assembly-convo
+assembly-orchestrator-flows
