@@ -14,6 +14,7 @@ import { SessionViewerPage } from './pages/SessionViewerPage'
 import { ICPPage } from './pages/ICPPage'
 import { PushPullPage } from './pages/PushPullPage'
 import { RequestsPage } from './pages/RequestsPage'
+import { PlaybookPage } from './pages/PlaybookPage'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
       <Route path="/app/icp" element={<ICPPage />} />
       <Route path="/app/push-pull" element={<PushPullPage />} />
       <Route path="/app/requests" element={<RequestsPage />} />
+      <Route path="/app/playbook" element={<PlaybookPage />} />
       <Route path="/logo-options" element={<LogoOptionsPage />} />
       <Route path="/developer" element={<DeveloperPage />} />
     </Routes>
